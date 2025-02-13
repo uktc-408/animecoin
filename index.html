@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>[_______]</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome CDN for icons -->
+<!-- Font Awesome CDN for icons (without integrity attribute) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Prevent caching during development (optional) -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+</head>
+<body>
+    <!--  <canvas id="matrixCanvas"></canvas>-->
+ <canvas id="myCanvas"></canvas>
+
+<!-- Fullscreen Textbar Container -->
+  
+<div id="textbarContainer">
+  <div id="fullscreenTextbar" class="fullscreen">
+        <div class="prompt-bar">
+  <input type="text" id="externalInput" placeholder="Search token address">
+  <button id="externalButton">{ SEARCH }</button>
+</div>
+
+  </div>
+</div>
+
+<!-- Fullscreen Terminal Container -->
+<div id="terminalContainer">
+  <div class="terminal" id="terminal">
+    <div class="instruction" id="instructionLine">// Add input</div>
+    <div class="command-line">
+      <span class="user-label">user$:</span>
+      <span class="prompt">&gt;</span>
+      <input type="text" id="commandInput" autocomplete="off">
+    </div>
+  </div>
+</div>
+
+
+
+<!-- (Other content like Matrix canvas, footer, etc.) -->
+
+<!-- Two Responsive Containers with Nested Content -->
+    <div class="responsive-containers">
+
+    
+<div class="container">
+  <!-- Only the inner content gets blurred -->
+  <div class="inner-wrapper blurred">
+    <!-- Inner Item 1 -->
+    <div class="inner-item">
+      <div class="left-section">
+        <img src="btcmtx.png" alt="BTC Matrix">
+      </div>
+      <div class="middle-section">
+        <div class="top-text">Item Name 1</div>
+        <div class="bottom-text">
+          <span class="thin-text">Description 1</span>
+          <button>Action</button>
+        </div>
+      </div>
+      <div class="right-section">
+        <div class="right-top">Word1</div>
+        <div class="right-bottom">Two Words</div>
+      </div>
+    </div>
+    <!-- Inner Item 2 -->
+    <div class="inner-item">
+      <div class="left-section">
+        <img src="btcmtx.png" alt="BTC Matrix">
+      </div>
+      <div class="middle-section">
+        <div class="top-text">Item Name 2</div>
+        <div class="bottom-text">
+          <span class="thin-text">Description 2</span>
+          <button>Action</button>
+        </div>
+      </div>
+      <div class="right-section">
+        <div class="right-top">Word2</div>
+        <div class="right-bottom">Two Words</div>
+      </div>
+    </div>
+    <!-- Inner Item 3 -->
+    <div class="inner-item">
+      <div class="left-section">
+        <img src="btcmtx.png" alt="BTC Matrix">
+      </div>
+      <div class="middle-section">
+        <div class="top-text">Item Name 3</div>
+        <div class="bottom-text">
+          <span class="thin-text">Description 3</span>
+          <button>Action</button>
+        </div>
+      </div>
+      <div class="right-section">
+        <div class="right-top">Word3</div>
+        <div class="right-bottom">Two Words</div>
+      </div>
+    </div>
+  </div>
+  <!-- Overlay text remains unblurred -->
+  <div class="overlay-text">Comming soon!</div>
+</div>
+    
+<div class="container">
+  <!-- Only the inner content gets blurred -->
+  <div class="inner-wrapper blurred">
+    <!-- Inner Item 1 -->
+    <div class="inner-item">
+      <div class="left-section">
+        <img src="btcmtx.png" alt="BTC Matrix">
+      </div>
+      <div class="middle-section">
+        <div class="top-text">Item Name 1</div>
+        <div class="bottom-text">
+          <span class="thin-text">Description 1</span>
+          <button>Action</button>
+        </div>
+      </div>
+      <div class="right-section">
+        <div class="right-top">Word1</div>
+        <div class="right-bottom">Two Words</div>
+      </div>
+    </div>
+    <!-- Inner Item 2 -->
+    <div class="inner-item">
+      <div class="left-section">
+        <img src="btcmtx.png" alt="BTC Matrix">
+      </div>
+      <div class="middle-section">
+        <div class="top-text">Item Name 2</div>
+        <div class="bottom-text">
+          <span class="thin-text">Description 2</span>
+          <button>Action</button>
+        </div>
+      </div>
+      <div class="right-section">
+        <div class="right-top">Word2</div>
+        <div class="right-bottom">Two Words</div>
+      </div>
+    </div>
+    <!-- Inner Item 3 -->
+    <div class="inner-item">
+      <div class="left-section">
+        <img src="btcmtx.png" alt="BTC Matrix">
+      </div>
+      <div class="middle-section">
+        <div class="top-text">Item Name 3</div>
+        <div class="bottom-text">
+          <span class="thin-text">Description 3</span>
+          <button>Action</button>
+        </div>
+      </div>
+      <div class="right-section">
+        <div class="right-top">Word3</div>
+        <div class="right-bottom">Two Words</div>
+      </div>
+    </div>
+  </div>
+  <!-- Overlay text remains unblurred -->
+  <div class="overlay-text">Comming soon!</div>
+</div>
+        
+    </div>
+  <!-- Footer -->
+<footer>
+  <div class="footer-links">
+    <!-- X.com (new Twitter) -->
+    <a href="https://x.com" target="_blank" title="X.com">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <!-- Git -->
+    <a href="https://git-scm.com" target="_blank" title="Git">
+      <i class="fab fa-git-alt"></i>
+    </a>
+    <!-- Email -->
+    <a href="mailto:someone@example.com" title="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <!-- Telegram -->
+    <a href="https://telegram.org" target="_blank" title="Telegram">
+      <i class="fab fa-telegram"></i>
+    </a>
+  </div>
+</footer>
+
+
+
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

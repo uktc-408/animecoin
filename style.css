@@ -1,0 +1,354 @@
+/* Base page styling */
+body {
+  background-color: #000;
+  color: #007BFF; /* Adjusted to blue */
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 20px;
+  /* Ensure the body has enough bottom padding so content is not hidden by the footer */
+}
+
+
+.prompt-bar {
+background-color: rgba(0, 0, 0, 0.8); /* Black with 80% opacity */
+  border: 0.8px solid rgba(0, 123, 255, 0.6); /* Blue with 60% opacity */
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto 10px auto;
+  border-radius: 3px; /* Optional: Slightly rounded corners */
+}
+
+/* Input inside the prompt bar */
+.prompt-bar input {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0); /* Fully transparent */
+  color: #007BFF; /* Adjusted to blue */
+  border: none;
+  outline: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+}
+
+/* Button inside the prompt bar */
+.prompt-bar button {
+background-color: rgba(0, 0, 0, 0.8); /* Black with 80% opacity */
+  color: #007BFF; /* Adjusted to blue */
+  border: 0.8px solid rgba(0, 123, 255, 0.6); /* Blue with 60% opacity */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  padding: 5px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* --- Terminal Styles --- */
+.terminal {
+  background-color: #000;
+  border: 1px solid #333;
+  padding: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.line {
+  margin: 5px 0;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+}
+
+.prompt {
+  margin-right: 5px;
+}
+
+/* Command input styling (matches terminal style) */
+#commandInput {
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  outline: none;
+  flex: 1;
+}
+
+/* Background here */
+#matrixCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+canvas {
+    position: fixed; /* Ensures it stays behind everything */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Push canvas to the background */
+}
+
+/* Fullscreen Textbar Container (already in place) */
+#textbarContainer {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent; /* Let the matrix background show */
+}
+
+/* Fullscreen Textbar Styling */
+#fullscreenTextbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+/* Fullscreen Terminal Container Styling */
+#terminalContainer {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent; /* Set to transparent or choose another background if needed */
+}
+
+/* Terminal Styling */
+.terminal {
+background-color: rgba(0, 0, 0, 0.8); /* Black with 80% opacity */
+  border: 0.8px solid rgba(0, 123, 255, 0.6); /* Blue with 60% opacity */
+  max-width: 800px;
+  width: 90%; /* Adjust as needed */
+  padding: 15px;
+}
+/* (Other existing CSS remains unchanged) */
+
+.instruction {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.command-line {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.user-label {
+  margin-right: 5px;
+}
+
+.prompt {
+  margin-right: 5px;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@keyframes blinkAnimation {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.blink {
+  animation: blinkAnimation 0.5s linear 3;
+}
+
+.disabled-prompt {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Terminal input styling */
+#commandInput {
+  background: none;
+  border: none;
+  outline: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Footer Styling */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  border-top:  0.8px solid rgba(0, 123, 255, 0.6); /* Blue with 60% opacity */
+
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer-links a {
+  color: #007BFF; /* Adjusted to blue */
+  margin: 0 15px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* Outer container styling */
+.container {
+  position: relative;
+  margin-bottom:3em;
+  /* You can add any additional styling (e.g., margin or padding) here */
+}
+
+/* Unified inner-wrapper: a single container with a border */
+.inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  border: 0.8px solid rgba(0, 123, 255, 0.6); /* Blue with 60% opacity */
+  padding: 5px;
+}
+
+/* Individual inner item (new layout) */
+.inner-item {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  /* No individual borders for a unified look */
+}
+
+/* Left section: holds the small image */
+.left-section {
+  flex: 0 0 auto;
+  margin-right: 10px;
+}
+
+.left-section img {
+  width: 20px;   /* Approximately 1/2 cm on many screens */
+  height: 20px;
+}
+
+/* Middle section: text block with two rows */
+.middle-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.middle-section .top-text {
+  font-weight: bold;
+  margin-bottom: 2px;
+  font-size: 14px;
+}
+
+.middle-section .bottom-text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.middle-section .bottom-text .thin-text {
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.middle-section .bottom-text button {
+  font-size: 12px;
+  padding: 2px 5px;
+  background-color: #007BFF;  /* Imperial red */
+  color: #000;                /* Black text for contrast */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.middle-section .bottom-text button:hover {
+  background-color:#007BFF; /* Slightly darker red on hover */
+  transform: scale(1.05);
+}
+
+.middle-section .bottom-text button:active {
+  background-color: #007BFF; /* Even darker red when pressed */
+  transform: scale(0.98);
+}
+
+/* Right section: two small texts, stacked vertically */
+.right-section {
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+.right-section .right-top {
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.right-section .right-bottom {
+  font-size: 12px;
+}
+
+/* Overlay text: positioned in the center of the outer container */
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #007BFF;
+  font-size: 24px;
+  font-weight: bold;
+  pointer-events: none; /* Allows clicks to pass through */
+}
+
+/* Parent wrapper for responsive containers */
+.responsive-containers {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Adjust gap between containers as needed */
+}
+
+/* Each container on large screens: assume two per row */
+.responsive-containers .container {
+  flex: 1 1 calc(50% - 20px);
+  max-width: calc(50% - 20px);
+}
+
+/* On smaller screens, stack containers vertically */
+@media (max-width: 768px) {
+  .responsive-containers {
+    flex-direction: column;
+  }
+  .responsive-containers .container {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* Blur effect for inner content */
+.blurred {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+}
+
+/* Disable buttons inside blurred elements */
+.blurred button {
+  pointer-events: none;
+  opacity: 0.5;
+}
