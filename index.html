@@ -22,27 +22,36 @@
 
 <!-- Fullscreen Textbar Container -->
   
-<div id="textbarContainer">
-  <div id="fullscreenTextbar" class="fullscreen">
-        <div class="prompt-bar">
-  <input type="text" id="externalInput" placeholder="Search token address">
-  <button id="externalButton">{ SEARCH }</button>
-</div>
-
+<div id="logoContainer">
+  <div id="fullscreenLogo" class="fullscreen">
+    <div class="logo-wrapper">
+      <img src="logo.png" class="logo">
+      <button id="externalButton" class="neon-button">{ START }</button>
+    </div>
   </div>
 </div>
+
+
 
 <!-- Fullscreen Terminal Container -->
 <div id="terminalContainer">
   <div class="terminal" id="terminal">
+    <!-- Static lines added here -->
+    <div class="static-line">Willkommen to PolizAI</div>
+    <div class="static-line">The ultimate pre-trade analysis for users</div>
+    <div class="static-line">We analyze contracts to prevent you from failling into scams</div>
+
+    <!-- Instruction line -->
     <div class="instruction" id="instructionLine">// Add input</div>
-    <div class="command-line">
+
+    <!-- Command input --><div class="command-line">
       <span class="user-label">user$:</span>
       <span class="prompt">&gt;</span>
       <input type="text" id="commandInput" autocomplete="off">
     </div>
   </div>
 </div>
+
 
 
 

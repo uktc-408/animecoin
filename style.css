@@ -4,43 +4,89 @@ body {
   color: #007BFF; /* Adjusted to blue */
   font-family: 'Courier New', Courier, monospace;
   margin: 0;
-  padding: 20px;
+  padding: 30px;
+  background-image: url('animationV2.gif'); /* Specify the correct path */
+  background-repeat: no-repeat;   /* Prevents the image from repeating */
+  background-position: center center; /* Centers the image */
+  background-attachment: fixed;   /* Keeps the background fixed during scrolling */
+  background-size: cover;         /* Ensures the image covers the entire background */
+
+
   /* Ensure the body has enough bottom padding so content is not hidden by the footer */
 }
 
 
-.prompt-bar {
-background-color: rgba(0, 0, 0, 0.8); /* Black with 80% opacity */
-  border: 0.8px solid rgba(0, 123, 255, 0.6); /* Blue with 60% opacity */
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  max-width: 800px;
-  margin: 0 auto 10px auto;
-  border-radius: 3px; /* Optional: Slightly rounded corners */
-}
 
 /* Input inside the prompt bar */
-.prompt-bar input {
-  flex: 1;
-  background-color: rgba(0, 0, 0, 0); /* Fully transparent */
-  color: #007BFF; /* Adjusted to blue */
-  border: none;
-  outline: none;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 16px;
+/* Fullscreen container to center everything */
+#logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  text-align: center;
 }
 
-/* Button inside the prompt bar */
-.prompt-bar button {
-background-color: rgba(0, 0, 0, 0.8); /* Black with 80% opacity */
-  color: #007BFF; /* Adjusted to blue */
-  border: 0.8px solid rgba(0, 123, 255, 0.6); /* Blue with 60% opacity */
+/* Center logo & button properly in a vertical stack */
+.logo-wrapper {
+  display: flex;
+  flex-direction: column; /* Stacks elements vertically */
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Space between logo & button */
+}
+
+/* Bigger Logo with Neon Glow */
+.logo {
+  width: 220px; /* Adjust as needed */
+  height: auto;
+  filter: drop-shadow(0 0 15px rgba(0, 183, 255, 0.9)); /* Neon glow effect */
+  transition: transform 0.3s ease-in-out, filter 0.3s;
+}
+
+
+
+/* Cyberpunk Neon Button */
+.neon-button {
+  background: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 183, 255, 0.9); /* Neon blue text */
+  border: 1px solid rgba(0, 183, 255, 0.9);
+  box-shadow: 0 0 15px rgba(0, 183, 255, 0.8); /* Outer glow */
   font-family: 'Courier New', Courier, monospace;
-  font-size: 16px;
-  padding: 5px 10px;
-  margin-left: 5px;
+  font-size: 18px;
+  padding: 12px 24px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px; /* Rounded edges */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Button Hover Effect */
+.neon-button:hover {
+  background: rgba(0, 183, 255, 0.2);
+  box-shadow: 0 0 25px rgba(0, 183, 255, 1); /* Stronger glow on hover */
+  transform: scale(1.1);
+}
+
+/* Button Click Effect */
+.neon-button:active {
+  background: rgba(0, 183, 255, 0.3);
+  transform: scale(0.98);
+}
+
+/* Button Flickering Glow Effect */
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.85; }
+  100% { opacity: 1; }
+}
+
+.neon-button {
+  animation: flicker 1s infinite alternate ease-in-out;
 }
 
 /* --- Terminal Styles --- */
@@ -192,7 +238,7 @@ footer {
   left: 0;
   width: 100%;
   background-color: #000;
-  border-top:  0.8px solid rgba(0, 123, 255, 0.6); /* Blue with 60% opacity */
+  /*border-top:  0.8px solid rgba(0, 123, 255, 0.6); /* Blue with 60% opacity */
 
   text-align: center;
   padding: 10px 0;
